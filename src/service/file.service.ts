@@ -2,7 +2,8 @@ import { UploadedFile } from "express-fileupload";
 import path from "path";
 import config from "config";
 import fs from "fs";
-const domain = process.env.DOMAIN || config.get<string>("domain");
+
+const domain = "http://localhost:8000" || config.get<string>("domain");
 
 export const storeFile = (
   folderName: string,
